@@ -20,6 +20,8 @@ def driver():
     driver.quit()
 
 
+@pytest.mark.ui
+@allure.story("Aviasales UI")
 @allure.title("Поиск по полному названию города")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_search_full_city_name(driver):
@@ -40,6 +42,8 @@ def test_search_full_city_name(driver):
     with allure.step("Проверка, что город корректно заполнился в поле"):
         assert search_query.lower() in page.get_input_value().lower()
 
+@pytest.mark.ui
+@allure.story("Aviasales UI")
 @allure.title("Поиск по IATA коду аэропорта")
 @allure.severity(allure.severity_level.CRITICAL)
 def test_search_iata_code(driver):
@@ -57,6 +61,8 @@ def test_search_iata_code(driver):
     with allure.step("Проверка, что поле заполнено корректно"):
         assert "Шереметьево" in page.get_input_value()
 
+@pytest.mark.ui
+@allure.story("Aviasales UI")
 @allure.title("Поиск по названию страны")
 @allure.severity(allure.severity_level.NORMAL)
 def test_search_country_name(driver):
@@ -74,6 +80,8 @@ def test_search_country_name(driver):
     with allure.step("Проверка, что выбран нужный город/аэропорт"):
         assert "Рим" in page.get_input_value()
 
+@pytest.mark.ui
+@allure.story("Aviasales UI")
 @allure.title("Ввод части названия города")
 @allure.severity(allure.severity_level.NORMAL)
 def test_search_partial_country_name(driver):
@@ -96,6 +104,8 @@ def test_search_partial_country_name(driver):
 
 # ================= НЕГАТИВНЫЕ СЦЕНАРИИ =================
 
+@pytest.mark.ui
+@allure.story("Aviasales UI")
 @allure.title("Ввод несуществующего названия")
 @allure.severity(allure.severity_level.NORMAL)
 def test_search_invalid_name(driver):
