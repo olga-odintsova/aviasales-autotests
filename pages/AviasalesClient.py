@@ -19,7 +19,7 @@ class AviasalesClient:
         """Возвращает заголовки по умолчанию, включая токен."""
         return {"X-Access-Token": self.token}
 
-    def get_prices_for_dates(self, params: Optional[Dict[str, Any]] = None, 
+    def get_prices_for_dates(self, params: Optional[Dict[str, Any]] = None,
                              headers: Optional[Dict[str, str]] = None) -> Response:
         """Выполняет GET-запрос к эндпоинту prices_for_dates.
 

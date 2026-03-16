@@ -16,14 +16,14 @@ class SearchPage:
         """
         self.driver = driver
         self.wait = WebDriverWait(driver, 5)
-        
+
         self.input_locator = (By.ID, 'avia_form_destination-input')
         self.dropdown_item_locator = (By.ID, 'avia_form_destination-menu')
         self.empty_result_locator = (By.CSS_SELECTOR, '[data-test-id="status-message"]')
 
     def open(self) -> None:
         """Открывает главную страницу поиска."""
-        self.driver.get("https://www.aviasales.ru/") # Укажите нужный URL
+        self.driver.get("https://www.aviasales.ru/")  # Укажите нужный URL
 
     def enter_search_query(self, query: str) -> None:
         """Вводит текст в поле поиска.
