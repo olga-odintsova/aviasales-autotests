@@ -1,12 +1,13 @@
 import pytest
 import allure
 from pages.AviasalesClient import AviasalesClient
+import os
 
 
 @pytest.fixture
 def api_client() -> AviasalesClient:
     """Фикстура для инициализации клиента API перед каждым тестом."""
-    return AviasalesClient("40402849993f7ae72af1a6517b0d6d39")
+    return AviasalesClient(os.environ["TOKEN"])
 
 
 @pytest.fixture
