@@ -1,23 +1,6 @@
 import pytest
 import allure
-from selenium import webdriver
 from pages.SearchPage import SearchPage
-from selenium.webdriver.edge.service import Service as EdgeService
-from webdriver_manager.microsoft import EdgeChromiumDriverManager
-
-
-@pytest.fixture
-def driver():
-    url = "https://msedgedriver.microsoft.com/LATEST_RELEASE"
-    driver = webdriver.Edge(
-        service=EdgeService(EdgeChromiumDriverManager(
-            url="https://msedgedriver.microsoft.com",
-            latest_release_url=url).install())
-    )
-    driver.implicitly_wait(3)
-    driver.maximize_window()
-    yield driver
-    driver.quit()
 
 
 @pytest.mark.ui

@@ -1,31 +1,5 @@
 import pytest
 import allure
-from pages.AviasalesClient import AviasalesClient
-import os
-
-
-@pytest.fixture
-def api_client() -> AviasalesClient:
-    """Фикстура для инициализации клиента API перед каждым тестом."""
-    return AviasalesClient(os.environ["TOKEN"])
-
-
-@pytest.fixture
-def base_params() -> dict:
-    """Фикстура с базовыми параметрами для успешного запроса."""
-    return {
-        "origin": "TBS",
-        "destination": "MOW",
-        "departure_at": "2026-01",
-        "return_at": "2026-02",
-        "unique": "false",
-        "sorting": "price",
-        "direct": "false",
-        "currency": "rub",
-        "limit": "30",
-        "page": "1",
-        "one_way": "false"
-    }
 
 
 @pytest.mark.api
