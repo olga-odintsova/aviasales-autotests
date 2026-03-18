@@ -43,6 +43,7 @@ pip install -r requirements.txt
 
 API тесты должны запускаться с установленной переменной окружения `TOKEN`, которая должна содержать [ключ авторизации](https://support.travelpayouts.com/hc/ru/articles/13024069738386-%D0%93%D0%B4%D0%B5-%D0%BD%D0%B0%D0%B9%D1%82%D0%B8-API-%D0%BA%D0%BB%D1%8E%D1%87-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD)
 
+Как получить ключ авторизации: [https://support.travelpayouts.com/hc/ru/articles/13024069738386-%D0%93%D0%B4%D0%B5-%D0%BD%D0%B0%D0%B9%D1%82%D0%B8-API-%D0%BA%D0%BB%D1%8E%D1%87-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD](https://support.travelpayouts.com/hc/ru/articles/13024069738386-%D0%93%D0%B4%D0%B5-%D0%BD%D0%B0%D0%B9%D1%82%D0%B8-API-%D0%BA%D0%BB%D1%8E%D1%87-%D1%82%D0%BE%D0%BA%D0%B5%D0%BD)
 
 ## Инструкции по запуску тестов
 
